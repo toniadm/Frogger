@@ -66,7 +66,7 @@ Player.prototype.render = function() {
 Player.prototype.handleInput = function(key) {
   switch (key) {
     case "left":
-      this.x -= -35;
+      this.x -= 35;
       break;
 
     case "right":
@@ -74,7 +74,7 @@ Player.prototype.handleInput = function(key) {
       break;
 
     case "up":
-      this.y -= -35;
+      this.y -= 35;
       break;
 
     case "down":
