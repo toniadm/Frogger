@@ -74,11 +74,11 @@ Player.prototype.handleInput = function(key) {
       break;
 
     case "up":
-      this.y -= 35;
+      this.y += 35;
       break;
 
     case "down":
-      this.y += 35;
+      this.y -= 35;
       break;
   }
 };
