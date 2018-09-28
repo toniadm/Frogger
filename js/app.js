@@ -28,7 +28,7 @@ Enemy.prototype.render = function() {
 
 // The player
 var Player = function() {
-  this.sprite = "images/char-pink-girl.png";
+  this.sprite = 'images/char-pink-girl.png';
   this.x = 100;
   this.y = 400;
 };
@@ -47,7 +47,7 @@ Player.prototype.render = function() {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-var allEnemies = [new Enemy(250, 200), new Enemy(90, 60), new Enemy(25, 150)];
+var allEnemies = [new Enemy(250,200), new Enemy(90,60), new Enemy(25,150)];
 allEnemies.forEach(function() {});
 var player = new Player();
 
