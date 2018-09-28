@@ -2,6 +2,9 @@
 var player;
 var Enemy = function() {
   // Variables applied to each of our instances go here,
+  this.x = x;
+  this.y = y;
+  this.speed = Math.floor(Math.random() * 300);
   // we've provided one for you to get started
 
   // The image/sprite for our enemies, this uses
@@ -22,7 +25,28 @@ Enemy.prototype.render = function() {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-var allEnemies = [];
+// The player
+var Player = function() {
+  this.sprite = "images/char-pink-girl.png";
+  this.x = 200;
+  this.y = 350;
+};
+
+Player.prototype.update = function(dt) {
+  // You should multiply any movement by the dt parameter
+  // which will ensure the game runs at the same speed for
+  // all computers.
+};
+
+// Draw the player on screen
+Player.prototype.render = function() {
+  ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
+var fstEnemy;
+var sndEnemy;
+var thdEnemy;
+var allEnemies = [fstEnemy, sndEnemy, thdEnemy];
 allEnemies.forEach(function() {});
 
 // Now write your own player class
