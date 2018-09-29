@@ -16,7 +16,7 @@ Enemy.prototype.update = function(dt) {
   this.x += this.speed * dt;
   if (this.x > 500) {
     this.x = -50;
-    this.speed = Math.floor(Math.random() * 260) + 150;
+    this.speed = Math.floor(Math.random() * 175) + 150;
   }
 
   // Collision detection between player and enemies
