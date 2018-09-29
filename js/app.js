@@ -58,7 +58,7 @@ Player.prototype.update = function(dt) {
     player.y = 360;
   }
 
-  // When player reaches water go to original position
+  // When player reaches water go back to original position
   if (player.y < 10) {
     alert("You won the game!");
     player.x = 210;
@@ -94,7 +94,6 @@ Player.prototype.handleInput = function(key) {
 
 // Initialize variable containing enemy objects as an array
 let allEnemies = [new Enemy(250, 200), new Enemy(90, 60), new Enemy(25, 150)];
-allEnemies.forEach(function() {});
 
 // Initialize variable containing player object
 let player = new Player();
