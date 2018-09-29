@@ -12,18 +12,15 @@ var Enemy = function(x, y) {
   this.sprite = "images/enemy-bug.png";
 };
 
-// Update the enemy's position, required method for game
-// Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
-  // You should multiply any movement by the dt parameter
+  // movement and sped of enemy objects
   this.x += this.speed * dt;
-  // which will ensure the game runs at the same speed for
-  // all computers.
   if (this.x > 500) {
     this.x = -50;
     this.speed = 100 + Math.floor(Math.random() * 260);
   }
 
+  //Collision detection between player and enemies
   if (
     player.x < this.x + 80 &&
     player.x + 80 > this.x &&
@@ -61,8 +58,7 @@ Player.prototype.render = function() {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-// This class requires an update(), render() and
-// a handleInput() method.
+// Control movement of player
 Player.prototype.handleInput = function(key) {
   switch (key) {
     case "left":
@@ -82,12 +78,12 @@ Player.prototype.handleInput = function(key) {
       break;
   }
 };
-// Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
+
+// Initialize variable containing enemy objects as an array
 var allEnemies = [new Enemy(250, 200), new Enemy(90, 60), new Enemy(25, 150)];
 allEnemies.forEach(function() {});
 
-// Place the player object in a variable called player
+// Initialize variable containing player object
 var player = new Player();
 
 // This listens for key presses and sends the keys to your
