@@ -1,3 +1,6 @@
+
+"use strict";
+
 // Enemies our player must avoid
 let Enemy = function(x, y) {
 
@@ -46,24 +49,24 @@ let Player = function() {
 Player.prototype.update = function(dt) {
 
   //Ensure player does not go off left/right side of the screen
-  if (player.x > 400) {
-     player.x = 400;
+  if (this.x > 400) {
+     this.x = 400;
   }
 
-  if (player.x < 5) {
-    player.x = 5;
+  if (this.x < 5) {
+    this.x = 5;
   }
 
   // Ensure player does not go off bottom of the screen
-  if (player.y > 400) {
-    player.y = 400;
+  if (this.y > 400) {
+    this.y = 400;
   }
 
   // When player reaches water go back to original position
-  if (player.y < 10) {
+  if (this.y < 10) {
     alert("You won the game!");
-    player.x = 210;
-    player.y = 380;
+    this.x = 210;
+    this.y = 380;
   }
 };
 
