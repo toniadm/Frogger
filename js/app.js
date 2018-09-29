@@ -1,7 +1,6 @@
 // Enemies our player must avoid
 let Enemy = function(x, y) {
 
-  // Set speed of enemies
   this.x = x;
   this.y = y;
   this.speed = Math.random() * 300;
@@ -12,7 +11,7 @@ let Enemy = function(x, y) {
 
 Enemy.prototype.update = function(dt) {
 
-  // Movement and sped of enemy objects
+  // Movement and speed of enemy objects
   this.x += this.speed * dt;
   if (this.x > 500) {
     this.x = -50;
