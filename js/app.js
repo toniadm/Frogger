@@ -47,22 +47,24 @@ let Player = function() {
 Player.prototype.update = function(dt) {
 
   //Ensure player does not go off left/right side of the screen
-  if (player.x > 410 || player.x < 20) {
-     player.x = 210;
-     player.y = 360;
+  if (player.x > 400) {
+     player.x = 400;
+  }
+
+  if (player.x < 5) {
+    player.x = 5;
   }
 
   // Ensure player does not go off bottom of the screen
-  if (player.y > 425) {
-    player.x = 210;
-    player.y = 360;
+  if (player.y > 400) {
+    player.y = 400;
   }
 
   // When player reaches water go back to original position
   if (player.y < 10) {
     alert("You won the game!");
     player.x = 210;
-    player.y = 360;
+    player.y = 380;
   }
 };
 
