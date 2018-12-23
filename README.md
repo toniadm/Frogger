@@ -1,5 +1,7 @@
 # Arcade Game Project
 
+![Image of Arcade Game](arcade.png)
+
 ## Table of Contents
 
 * [Instructions](#instructions)
